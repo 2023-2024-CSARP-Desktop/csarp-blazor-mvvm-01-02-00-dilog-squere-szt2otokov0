@@ -1,4 +1,4 @@
-﻿@namespace Sqaure.Client.Pages
+﻿@namespace Square.Client.Pages
 @using System.ComponentModel;
 @using Square.Client.ViewModels;
 
@@ -6,18 +6,18 @@
 
 @code {
 
-    [CascadingParameter(Name = "ViewModel")]
+    [Inject]
     private IViewModelBase ViewModel { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        /*ViewModel.PropertyChanged += async (sender, e) =>
+        ViewModel.PropertyChanged += async (sender, e) =>
         {
             await InvokeAsync(() =>
             {
                 StateHasChanged();
             });
-        };*/
+        };
         await base.OnInitializedAsync();
     }
 

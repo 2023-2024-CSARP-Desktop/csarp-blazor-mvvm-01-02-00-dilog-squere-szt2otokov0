@@ -1,7 +1,16 @@
-﻿@page "/square"
+﻿@using Square.Client.ViewModels;
+@namespace Square.Client.Pages
+@page "/square"
+@inherits BasePage
 
 <h3>Négyzet kerület és terület számítás</h3>
+<CascadingValue Name="ViewModel" Value="@square">
+    <SquareForm />
+    <SquareResultBox />
+</CascadingValue>
 
 @code {
 
+    [Inject]
+    public ISquareViewModel? square { get; set; }
 }

@@ -1,0 +1,22 @@
+﻿@using Square.Client.ViewModels
+@namespace Square.Client.Pages
+
+@if (SquareModel is not null)
+{
+    <EditForm Model="@SquareModel">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="side">
+                    <InputText id="side" class="form-control" @bind-Value="SquareModel.Side"></InputText>
+                </label>
+            </div>
+            <button type="submit" class="mt-2" disabled="@(SquareModel as SquareViewModel).IsBusy">Számolj!</button>
+        </div>
+    </EditForm>
+}
+
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    private SquareViewModel? SquareModel { get; set; }
+}
