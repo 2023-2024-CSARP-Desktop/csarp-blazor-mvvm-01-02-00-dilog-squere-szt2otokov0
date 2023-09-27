@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace ViewModels.BaseClass
+namespace Square.Client.ViewModels
 {
     public class ViewModelBase : IViewModelBase
     {
@@ -15,7 +15,7 @@ namespace ViewModels.BaseClass
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

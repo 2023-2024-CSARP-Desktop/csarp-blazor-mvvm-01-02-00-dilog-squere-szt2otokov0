@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ViewModels.BaseClass
+namespace Square.Client.ViewModels
 {
     public interface IViewModelBase : INotifyPropertyChanged
     {

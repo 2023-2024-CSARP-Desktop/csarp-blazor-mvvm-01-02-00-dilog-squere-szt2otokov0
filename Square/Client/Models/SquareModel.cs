@@ -1,6 +1,6 @@
-﻿namespace SquareProject.Models
+﻿namespace Square.Client.Models
 {
-    public class Square
+    public class SquareModel
     {
         private double _side;
         public double Side
@@ -15,7 +15,7 @@
             }
         }
 
-        public Square(double side)
+        public SquareModel(double side)
         {
             if (side <= 0)
                 throw new SqueraSideCannotBeNagativOrZero(side + " oldalú négyzet nincs. A négyzetet nem jön létre.");

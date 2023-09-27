@@ -1,16 +1,14 @@
-﻿using SquareProject.Client.ViewModels;
-using SquareProject.Models;
-using ViewModels.BaseClass;
+﻿using Square.Client.Models;
 
-namespace SquareProject.ViewModels
+namespace Square.Client.ViewModels
 {
     public class SquareViewModel : ViewModelBase
     {
-        private Square _square;
+        private Models.SquareModel _square;
 
         public SquareViewModel()
         {
-            _square = new Square(1);
+            _square = new SquareModel(1);
         }
 
 
@@ -26,7 +24,7 @@ namespace SquareProject.ViewModels
                 {
                     _square.Side = Convert.ToDouble(value);
                 }
-                catch (Exception e)
+                catch
                 {
                 }
             }

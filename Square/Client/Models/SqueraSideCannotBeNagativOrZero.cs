@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace SquareProject.Models
+namespace Square.Client.Models
 {
     [Serializable]
     internal class SqueraSideCannotBeNagativOrZero : Exception

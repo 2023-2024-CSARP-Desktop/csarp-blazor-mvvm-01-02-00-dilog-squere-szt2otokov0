@@ -1,6 +1,6 @@
-﻿@namespace Pages.BaseClass
+﻿@namespace Sqaure.Client.Pages
 @using System.ComponentModel;
-@using ViewModels.BaseClass;
+@using Square.Client.ViewModels;
 
 @inherits ComponentBase
 
@@ -21,7 +21,7 @@
         await base.OnInitializedAsync();
     }
 
-    async void OnPropertyChangedHandler(object sender, PropertyChangedEventArgs e)
+    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
     {
         await InvokeAsync(() =>
         {
