@@ -4,7 +4,7 @@ namespace Square.Client.ViewModels
 {
     public class SquareViewModel : ViewModelBase, ISquareViewModel
     {
-        private Models.SquareModel _square;
+        private SquareModel _square;
 
         public SquareViewModel()
         {

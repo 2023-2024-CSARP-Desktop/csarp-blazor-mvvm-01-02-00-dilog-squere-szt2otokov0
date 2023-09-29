@@ -14,6 +14,7 @@ namespace Square.Client
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddSingleton<ISquareViewModel,SquareViewModel>();
+            Console.WriteLine("I'm adding the service, I swear! See? " + (builder.Services.Last().ImplementationInstance as SquareViewModel is IViewModelBase));
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             await builder.Build().RunAsync();

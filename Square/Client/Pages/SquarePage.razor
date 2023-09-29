@@ -4,7 +4,7 @@
 @inherits BasePage
 
 <h3>Négyzet kerület és terület számítás</h3>
-<CascadingValue Name="ViewModel" Value="@square">
+<CascadingValue Name="ViewModel" Value="@ViewModel">
     <SquareForm />
     <SquareResultBox />
 </CascadingValue>
@@ -12,5 +12,5 @@
 @code {
 
     [Inject]
-    public ISquareViewModel? square { get; set; }
+    public ISquareViewModel? ViewModel { get; set; }
 }

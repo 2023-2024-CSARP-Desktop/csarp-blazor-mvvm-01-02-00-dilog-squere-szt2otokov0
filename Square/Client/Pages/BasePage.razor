@@ -7,7 +7,7 @@
 @code {
 
     [Inject]
-    private IViewModelBase ViewModel { get; set; }
+    private IViewModelBase? ViewModel { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -21,7 +21,7 @@
         await base.OnInitializedAsync();
     }
 
-    async void OnPropertyChangedHandler(object? sender, PropertyChangedEventArgs e)
+    async void OnPropertyChangedHandler(object sender, PropertyChangedEventArgs e)
     {
         await InvokeAsync(() =>
         {

@@ -5,7 +5,7 @@
 {
     <div class="card mt-2">
         <h5 class="card-title">Kiértékelés</h5>
-        <div class="card-div">
+        <div class="card-body">
             <p>Kerület: @SquareModel.Perimeter</p>
             <p>Terület: @SquareModel.Area</p>
         </div>
@@ -15,5 +15,5 @@
 
 @code {
     [CascadingParameter(Name = "ViewModel")]
-    private SquareViewModel? SquareModel { get; set; }
+    private ISquareViewModel? SquareModel { get; set; }
 }
